@@ -2,64 +2,97 @@
 
 ## About the Project
 
-The Helmet Detection System is a computer vision project designed to detect helmets using the YOLO object detection model. It can help identify whether helmets are present in images or video, depending on how the program is used.
-
-This project demonstrates the use of object detection for safety monitoring and helmet compliance.
+The Helmet Detection System is a computer vision application that uses a trained YOLO model to detect helmets. It supports real-time detection through a webcam and detection from saved images. The application also includes a built-in detection log that records the date and time of detection events.
 
 ## Features
 
-- Detects helmets using a trained YOLO model.
-- Uses computer vision for object detection.
-- Includes a Python detection script.
-- Includes a compiled application for Windows.
+- **Real-Time Webcam Detection:** Detect helmets using a live webcam feed.
+- **Saved Image Detection:** Detect helmets in images stored on the computer.
+- **Detection Log:** Records the date and time of detection events for tracking and review.
+- **YOLO Object Detection:** Uses a trained model to identify helmets.
+- **Windows Application:** Includes an executable for running the application on Windows.
 
 ## Technologies Used
 
 - Python
-- YOLO object detection
+- YOLO
 - C programming language
 - Computer vision
 
-## Project Files
+## Project Structure
 
-| File | Description |
-|---|---|
-| `detect_helmet.py` | Python script for helmet detection. |
-| `program.c` | C source code associated with the project. |
-| `helmet.pt` | Trained YOLO model weights used for detection. |
-| `program.exe` | Executable application for Windows. |
+```text
+helmet-detector/
+├── detect_helmet.py
+├── program.c
+├── helmet.pt
+├── program.exe
+├── README.md
+└── images/
+    ├── webcam-detection.png
+    ├── image-detection.png
+    └── detection-log.png
+```
 
-## Requirements
+## Screenshots
 
-- Python (if running the Python script).
-- The required Python packages for the detection program.
-- The trained model file, `helmet.pt`.
-- Windows (if running `program.exe`).
+### Real-Time Webcam Detection
 
-## How to Run
+![Webcam Detection](images/webcam-detection.png)
 
-### Option 1: Run the Windows Application
+### Saved Image Detection
 
-1. Download `program.exe` from this repository.
-2. Download any additional files required by the application.
-3. Run `program.exe` on a compatible Windows computer.
+![Saved Image Detection](images/image-detection.png)
 
-### Option 2: Run the Python Script
+### Detection Log
+
+![Detection Log](images/detection-log.png)
+
+## Installation and Usage
+
+### Running the Windows Application
+
+1. Download `program.exe` and any required supporting files.
+2. Ensure a webcam is connected for real-time detection.
+3. Run `program.exe`.
+4. Select the desired detection mode.
+5. View the detection log to review recorded events.
+
+### Running the Python Script
 
 1. Install Python.
-2. Install the required packages used by the project.
-3. Make sure `helmet.pt` is in the correct location.
-4. Run the following command in your terminal:
+2. Install the required Python packages.
+3. Ensure `helmet.pt` is in the correct location.
+4. Run the following command:
 
    ```bash
    python detect_helmet.py
    ```
 
-Note: The exact setup and input requirements depend on how the program was developed.
+The application requirements and setup may vary depending on the project configuration.
 
-## Project Purpose
+## File Descriptions
 
-This project explores how computer vision can be applied to helmet detection and safety monitoring. It also provides practical experience in object detection and software development.
+| File | Description |
+|---|---|
+| `detect_helmet.py` | Python script for helmet detection. |
+| `program.c` | C source code associated with the project. |
+| `helmet.pt` | Trained YOLO model weights. |
+| `program.exe` | Windows executable application. |
+| `images/` | Screenshots demonstrating the project features. |
+
+## Project Objectives
+
+- Apply computer vision techniques to helmet detection.
+- Support detection through webcams and saved images.
+- Record detection event timestamps for review.
+- Demonstrate the use of object detection in safety monitoring.
+
+## Future Improvements
+
+- Improve detection accuracy in different lighting conditions.
+- Add detailed detection reports and statistics.
+- Enhance the user interface and logging functionality.
 
 ## Author
 
